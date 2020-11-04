@@ -141,9 +141,10 @@ interface ICursorPosition<TDataType> {
 | remove(paths: number[][])                                                                                | Remove nodes by paths. For example `.remove([[0,1], [0,2]])`                                       |
 | removeSelected()                                                                                         | Removes selected nodes (if any)                                                                    |
 | getFirstNode(): ISlTreeNode                                                                              | Get the first node in the tree                                                                     |
-| getLastNode(): ISlTreeNode                                                                               | Get the last node in the tree
-| getNextNode(path: number[], filter?: (node: ISlTreeNode<TDataType>) => boolean): ISlTreeNode<TDataType>; | Get the next node. You can skip the next nodes by using `filter`
-| getPrevNode(path: number[], filter?: (node: ISlTreeNode<TDataType>) => boolean): ISlTreeNode<TDataType>; | Get the previous node. You can skip the previous nodes by using `filter`
+| getLastNode(): ISlTreeNode                                                                               | Get the last node in the tree                                                                      |
+| getNextNode(path: number[], filter?: (node: ISlTreeNode<TDataType>) => boolean): ISlTreeNode<TDataType>; | Get the next node. You can skip the next nodes by using `filter`                                   |
+| getPrevNode(path: number[], filter?: (node: ISlTreeNode<TDataType>) => boolean): ISlTreeNode<TDataType>; | Get the previous node. You can skip the previous nodes by using `filter`                           |
+| getParentNode(path: number[]): ISlTreeNode<TDataType>;                                                   | Get the parent node for given path                                                                 |
 
 # Slots
 
